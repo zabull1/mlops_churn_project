@@ -36,4 +36,13 @@ To address the Zabull Telecoms churn problem above, we aim to develop a predicti
 
 # 2. Technologies Used
 
+Below are the technologies used in this project
+
+## Cloud
+
+- **AWS (Amazon Web Services):** AWS is used for cloud-based infrastructure, including hosting and scaling deployed models.
+Amazon EC2: Amazon Elastic Compute Cloud (EC2) instances are utilized for virtual machines (VMs), supporting various project tasks.
+Amazon S3: Amazon Simple Storage Service (S3) is employed for secure and scalable data storage.
+Terraform: Terraform is used for Infrastructure as Code (IAC) to define, provision, and manage cloud resources in a declarative manner.
+
 
