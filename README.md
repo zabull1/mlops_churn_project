@@ -51,6 +51,59 @@ We made use of  **Amazon EC2**  instances for virtual machines (VMs)
 
 ![](assets/images/s3.png)
 
-Terraform: Terraform is used for Infrastructure as Code (IAC) to define, provision, and manage cloud resources in a declarative manner.
+We used  **Terraform** for for Infrastructure as Code (IAC) to define, provision, and manage cloud resources as also required.
 
+## Experiment Tracking
+
+For experiment tracking and model registry we used **mlflow** as seen below
+
+![](assets/images/mlflow.png)
+
+![](assets/images/register_model.png)
+
+![](assets/images/register_model2.png)
+
+![](assets/images/production_mlflow.png)
+
+
+## Workflow Orchestration
+
+We used prefect for all orchestration in model training, model batch deployment or scoring and model monitoring
+
+![](assets/images/prefect.png)
+
+## Deployment
+
+We deploy our model using the batch method of deployment since our use case is churning. We also used **Docker** to deploy our model 
+
+## Model Monitoring
+
+We used grafana and prostgres to monitor the performance of our model over time. We also implement alert when the prediction drift threshold is violated
+
+![](assets/images/grafana.png)
+
+![](assets/images/adminer.png)
+
+# 3. Best Practices
+
+below best practices were used
+
+- 1. tests: both unit and integrated tests were carried out
+- 2. Infratructure as code (IAC) terraform was used to define, provision, and manage cloud resources
+- 3. Makefile was used
+- 4. Pylint and black were also used linting and formatting
+- 5. Pre-commit was aslso used
+
+
+# 3. Reproducibility
+
+- To setup the environment see ![Setup](https://github.com/DataTalksClub/mlops-zoomcamp/blob/main/01-intro/README.md)
+- clone the repo ```git clone https://github.com/zabull1/mlops_churn_project.git```
+- update the .env.py file with .env with your credentials
+- run  ```mlflow ui \    
+            --backend-store-uri sqlite:///mlflow.db \
+            --default-artifact-root s3://churn-model-bucket-mlops-zoomcamp```
+- change the directory to ```training/``` and run ```training.py```
+- run the deployment ```batch_scoring_deploy.py```
+- run ```docker-compose up -build```
 
