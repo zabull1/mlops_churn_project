@@ -40,9 +40,17 @@ Below are the technologies used in this project
 
 ## Cloud
 
-- **AWS (Amazon Web Services):** AWS is used for cloud-based infrastructure, including hosting and scaling deployed models.
-Amazon EC2: Amazon Elastic Compute Cloud (EC2) instances are utilized for virtual machines (VMs), supporting various project tasks.
-Amazon S3: Amazon Simple Storage Service (S3) is employed for secure and scalable data storage.
+- **AWS (Amazon Web Services):** AWS is used for cloud-based infrastructure. The project was developed entirely on AWS cloud as required
+![](assets/images/aws.png)
+
+We made use of  **Amazon EC2**  instances for virtual machines (VMs)
+
+![](assets/images/ec2.png)
+
+**Amazon S3: Amazon Simple Storage Service (S3)**  was employed for secure and scalable data storage. Mainly used to store all our artifacts and models from the experiments we conducted during model training
+
+![](assets/images/s3.png)
+
 Terraform: Terraform is used for Infrastructure as Code (IAC) to define, provision, and manage cloud resources in a declarative manner.
 
 
