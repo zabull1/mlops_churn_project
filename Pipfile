@@ -1,0 +1,31 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+pandas = "*"
+seaborn = "*"
+matplotlib = "*"
+prefect = "*"
+mlflow = "*"
+boto3 = "*"
+python-dotenv = "*"
+xgboost = "*"
+s3fs = "*"
+prefect-aws = "*"
+evidently = "*"
+psycopg = "*"
+psycopg-binary = "*"
+
+[dev-packages]
+ipykernel = "*"
+pytest = "*"
+pylint = "==2.14.4"
+black = "*"
+isort = "*"
+pre-commit = "*"
+
+[requires]
+python_version = "3.9"
